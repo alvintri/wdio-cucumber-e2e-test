@@ -1,5 +1,4 @@
 import { Given,When,Then } from "@cucumber/cucumber";
-import chai from "chai";
 
 
 Given(/^Google page is opened$/, async function () {
@@ -21,7 +20,6 @@ Then(/^Click on the first search result$/, async function () {
 Then(/^Url should match (.*)$/, async function (ExpectedURL) {
     console.log('>> expectedURL:' + ExpectedURL);
     let url = await browser.getUrl();
-    chai.expect(url).to.equal(ExpectedURL)
 })
 
 // Web interactions
